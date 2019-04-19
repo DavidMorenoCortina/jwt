@@ -3,7 +3,7 @@
 This is a lite implementation of the **JWT standard** for **PHP** incluiding RSA key generation and basic user management. It only supports **RS256** algorithm and **ias** and **exp** properties.
 
 
-# Usage
+## Usage
 
 Uses **Dependency Injection** to get access to database for RSA keys and user validation. It can be overwritten to provide custom functionality.
 
