@@ -25,6 +25,12 @@ class DBInitialization {
         $stmt->closeCursor();
     }
 
+    public function removeRSATable(PDO $conn) :void {
+        $stmt = $conn->prepare('DROP TABLE `rsa_key`;');
+        $stmt->execute();
+        $stmt->closeCursor();
+    }
+
     /**
      * @param PDO $conn
      * @param string $name
@@ -74,6 +80,12 @@ class DBInitialization {
             ;
         ');
 
+        $stmt->execute();
+        $stmt->closeCursor();
+    }
+
+    public function removeUserTable(PDO $conn) :void {
+        $stmt = $conn->prepare('DROP TABLE `user`;');
         $stmt->execute();
         $stmt->closeCursor();
     }
